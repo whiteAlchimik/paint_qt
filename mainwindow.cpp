@@ -37,3 +37,28 @@ void MainWindow::slotTimer()
                                  ui->graphicsView->width() - 20,
                                  ui->graphicsView->height() - 20);
 }
+
+void MainWindow::on_actionPencil_triggered()
+{
+    qDebug() << "on_actionPencil_triggered";
+}
+
+void MainWindow::on_actionBrush_triggered()
+{
+
+}
+
+void MainWindow::on_actionBucket_triggered()
+{
+
+}
+
+void MainWindow::on_actionText_triggered()
+{
+
+}
+
+void MainWindow::on_actionEraser_triggered()
+{
+
+}

@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/image/tools">
+        <file>image/tools/paint-brush.png</file>
+        <file>image/tools/paint-bucket.png</file>
+        <file>image/tools/pencil.png</file>
+        <file>image/tools/quill.png</file>
+        <file>image/tools/eraser.png</file>
+    </qresource>
+</RCC>

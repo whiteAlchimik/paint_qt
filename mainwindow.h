@@ -2,10 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QOpenGLWidget>
 #include <QTimer>
 
 #include "paintscene.h"
+
+#include <QDebug>
 
 namespace Ui {
 class MainWindow;
@@ -26,13 +27,20 @@ protected:
 private slots:
     void slotTimer();
 
+    void on_actionPencil_triggered();
+
+    void on_actionBrush_triggered();
+
+    void on_actionBucket_triggered();
+
+    void on_actionText_triggered();
+
+    void on_actionEraser_triggered();
+
 private:
     Ui::MainWindow *ui;
-
     PaintScene *_ptrPaintScene;
-
     QTimer *_ptrTimer;
-
     const int _delayRendering = 50;
 };
 

@@ -3,7 +3,12 @@
 PaintScene::PaintScene(QObject *parent) :
     QGraphicsScene(parent)
 {
+    _ptrColor = new QColor(Qt::white);
+}
 
+PaintScene::~PaintScene()
+{
+    delete _ptrColor;
 }
 
 void PaintScene::mouseMoveEvent(QGraphicsSceneMouseEvent *event)

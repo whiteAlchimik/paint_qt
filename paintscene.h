@@ -3,6 +3,7 @@
 
 #include <QGraphicsScene>
 #include <QGraphicsSceneMouseEvent>
+#include <QColor>
 
 class PaintScene : public QGraphicsScene
 {
@@ -12,7 +13,7 @@ class PaintScene : public QGraphicsScene
 public:
     PaintScene(QObject *parent = nullptr);
 
-    ~PaintScene(){}
+    ~PaintScene();
 
 protected:
     void mouseMoveEvent(QGraphicsSceneMouseEvent *event);
@@ -20,6 +21,8 @@ protected:
 
 private:
     QPointF previousPoint;
+
+    QColor *_ptrColor;
 };
 
 #endif // PAINTSCENE_H

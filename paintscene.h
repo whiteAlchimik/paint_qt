@@ -27,6 +27,7 @@ private:
     QPointF previousPoint;
 
     QPen _pen;
+    QColor _color;
 };
 
 #endif // PAINTSCENE_H

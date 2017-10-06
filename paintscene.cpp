@@ -3,21 +3,25 @@
 PaintScene::PaintScene(QObject *parent) :
     QGraphicsScene(parent)
 {
-    _ptrColor = new QColor(Qt::white);
 }
 
 PaintScene::~PaintScene()
 {
-    delete _ptrColor;
+}
+
+void PaintScene::slotChangeColor(const QColor &color)
+{
+    _pen.setColor(color);
 }
 
 void PaintScene::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
 {
+    _pen.setWidth(10);
     addLine(previousPoint.x(),
             previousPoint.y(),
             event->scenePos().x(),
             event->scenePos().y(),
-            QPen(Qt::red,10,Qt::SolidLine,Qt::RoundCap));
+            _pen);
 
     previousPoint = event->scenePos();
 }

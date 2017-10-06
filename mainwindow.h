@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QTimer>
+#include <QColorDialog>
 
 #include "paintscene.h"
 
@@ -24,6 +25,9 @@ public:
 protected:
     void resizeEvent(QResizeEvent *event);
 
+signals:
+    void signalChangeColor(const QColor &);
+
 private slots:
     void slotTimer();
 
@@ -37,13 +41,13 @@ private slots:
 
     void on_actionEraser_triggered();
 
+    void on_actionPalette_triggered();
+
     void on_actionNew_triggered();
 
     void on_actionOpen_triggered();
 
     void on_actionSave_triggered();
-
-    void on_actionPalette_triggered();
 
 private:
     Ui::MainWindow *ui;

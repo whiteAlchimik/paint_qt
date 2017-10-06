@@ -4,6 +4,7 @@
 #include <QGraphicsScene>
 #include <QGraphicsSceneMouseEvent>
 #include <QColor>
+#include <QPen>
 
 class PaintScene : public QGraphicsScene
 {
@@ -15,6 +16,9 @@ public:
 
     ~PaintScene();
 
+public slots:
+    void slotChangeColor(const QColor &color);
+
 protected:
     void mouseMoveEvent(QGraphicsSceneMouseEvent *event);
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
@@ -22,7 +26,7 @@ protected:
 private:
     QPointF previousPoint;
 
-    QColor *_ptrColor;
+    QPen _pen;
 };
 
 #endif // PAINTSCENE_H

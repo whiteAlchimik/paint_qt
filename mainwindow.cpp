@@ -16,6 +16,11 @@ MainWindow::MainWindow(QWidget *parent) :
     _ptrTimer = new QTimer(this);
     connect(_ptrTimer, SIGNAL(timeout()), this, SLOT(slotTimer()));
     _ptrTimer->start(_delayRendering);
+
+    connect(this,
+            SIGNAL(signalChangeColor(QColor)),
+            _ptrPaintScene,
+            SLOT(slotChangeColor(QColor)));
 }
 
 MainWindow::~MainWindow()
@@ -63,6 +68,13 @@ void MainWindow::on_actionEraser_triggered()
 
 }
 
+void MainWindow::on_actionPalette_triggered()
+{
+    QColor color;
+    color = QColorDialog::getColor();
+    emit signalChangeColor(color);
+}
+
 void MainWindow::on_actionNew_triggered()
 {
 
@@ -74,11 +86,6 @@ void MainWindow::on_actionOpen_triggered()
 }
 
 void MainWindow::on_actionSave_triggered()
-{
-
-}
-
-void MainWindow::on_actionPalette_triggered()
 {
 
 }

@@ -5,5 +5,9 @@
         <file>image/tools/pencil.png</file>
         <file>image/tools/quill.png</file>
         <file>image/tools/eraser.png</file>
+        <file>image/file_tools/new-file.png</file>
+        <file>image/file_tools/open-archive.png</file>
+        <file>image/file_tools/save-file-button.png</file>
+        <file>image/tools/paint-palette.png</file>
     </qresource>
 </RCC>

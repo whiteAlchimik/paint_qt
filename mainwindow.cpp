@@ -62,3 +62,23 @@ void MainWindow::on_actionEraser_triggered()
 {
 
 }
+
+void MainWindow::on_actionNew_triggered()
+{
+
+}
+
+void MainWindow::on_actionOpen_triggered()
+{
+
+}
+
+void MainWindow::on_actionSave_triggered()
+{
+
+}
+
+void MainWindow::on_actionPalette_triggered()
+{
+
+}

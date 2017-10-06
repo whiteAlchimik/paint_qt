@@ -37,6 +37,14 @@ private slots:
 
     void on_actionEraser_triggered();
 
+    void on_actionNew_triggered();
+
+    void on_actionOpen_triggered();
+
+    void on_actionSave_triggered();
+
+    void on_actionPalette_triggered();
+
 private:
     Ui::MainWindow *ui;
     PaintScene *_ptrPaintScene;
